@@ -1,0 +1,9 @@
+{
+ "items": [
+  {"tone":"warn","title":"YouTube: 7 Shorts logged as posted on 13 Nov are not public","body":"T0_77viFjg0, lOaDhmCZE0, pbIvAsOFRyo, XBzFto7m4Ps, zV2dsKqDN4Y, Cn1PD5qEono, PjUs9BQWyJg never appeared in YouTube Studio reads. Unconfirmed. YouTube figures here cover public videos only."},
+  {"tone":"warn","title":"TikTok: posts from 13-14 Nov have vanished","body":"Posts from 13-14 Nov no longer show in TikTok Studio (14 logged as removed; who or why is not recorded). Switch on 'Include removed' to see the ones with an old snapshot."},
+  {"tone":"warn","title":"TikTok 7-day reach dropped","body":"7-day views went from 1.3K (14 Nov) to 132 (22 Nov). Cause not proven."},
+  {"tone":"info","title":"Twitch copyright-audio warning, 22 Nov (no strike)","body":"Twitch muted GTA radio songs (Overmono 'Welcome to Leonida' twice, Booty Luv 'Shine') in 3 VODs, deleted clips cut from them, and turned Always Publish VODs off. No strike was issued."},
+  {"tone":"info","title":"Open YouTube copyright items","body":"GTA 6 Walkthrough Part 3: Overmono claim, 25:09-25:32 trim requested, completion not recorded. Part 4: licensed songs (incl. 1:33:06-1:34:46) to mute before upload."}
+ ]
+}

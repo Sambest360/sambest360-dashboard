@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>samBest360 Accounts Dashboard</title>
+<link rel="icon" href="favicon.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#0b0f0c">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--g:#22C55E;--bg:#0b0f0c;--card:#131a15;--line:#223026;--tx:#e8f0ea;--mu:#8fa396;--w:#F59E0B;--r:#EF4444}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+header img{width:40px;height:40px;border-radius:10px}h1{font-size:18px;margin:0}.sub{color:var(--mu);font-size:12px}
+main{max-width:1200px;margin:0 auto;padding:14px}section{margin:22px 0}h2{font-size:16px;margin:0 0 4px;color:var(--g)}.cap{color:var(--mu);font-size:12px;margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.big{font-size:26px;font-weight:700;color:var(--g)}.lab{color:var(--mu);font-size:12px}.det{font-size:12px;color:var(--mu);margin-top:2px}
+.att{border-left:4px solid var(--w);background:var(--card);border-radius:8px;padding:10px 12px;margin:8px 0}.att.info{border-color:#0EA5E9}.att b{display:block}.att span{color:var(--mu);font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:end;margin:10px 0}.seg button{background:var(--card);color:var(--tx);border:1px solid var(--line);padding:8px 14px;cursor:pointer;font-size:14px}
+.seg button:first-child{border-radius:8px 0 0 8px}.seg button:last-child{border-radius:0 8px 8px 0}.seg button.on{background:var(--g);color:#04130a;border-color:var(--g);font-weight:700}
+label{display:flex;flex-direction:column;font-size:12px;color:var(--mu);gap:3px}select,input{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:14px}
+label.chk{flex-direction:row;align-items:center;gap:6px}input[type=checkbox]{accent-color:var(--g)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}.chart{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;height:280px;position:relative}
+.tw{overflow:auto;border:1px solid var(--line);border-radius:12px;max-height:560px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{position:sticky;top:0;background:#16201a;cursor:pointer;color:var(--g)}td.n,th.n{text-align:right}td a{color:var(--g);text-decoration:none}td.t{white-space:normal;min-width:200px}
+.tag{padding:1px 7px;border-radius:99px;font-size:11px;background:#1b2a20}.tag.rm{background:#3a1717;color:#fca5a5}.ref{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.ref span{font-size:11px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--mu)}.ref .bad{color:var(--w);border-color:var(--w)}
+footer{color:var(--mu);font-size:12px;padding:20px 14px;text-align:center}
+</style></head><body>
+<header><img src="icon-192.png" alt="SB"><div><h1>samBest360 Accounts Dashboard</h1><div class="sub" id="upd">Loading…</div></div></header>
+<main>
+<div class="ref" id="ref"></div>
+<section><div class="cards" id="kpi"></div></section>
+<section><h2>Needs attention</h2><div id="att"></div></section>
+<section><h2>Explore</h2><div class="cap">Filters drive the charts and the post table. Views/likes are lifetime counts at the last refresh, so older posts are favoured.</div>
+<div class="bar"><div class="seg" id="plat"></div>
+<label>Metric<select id="metric"><option value="views">Views</option><option value="likes">Likes</option><option value="comments">Comments</option></select></label>
+<label>Game<select id="game"></select></label>
+<label class="chk"><input type="checkbox" id="y24"> Include 2024 TikToks</label>
+<label class="chk"><input type="checkbox" id="rem"> Include removed TikToks</label></div>
+<div class="cards" id="kpi2"></div><div class="cap" id="twnote"></div></section>
+<section><h2 id="tl">Over time</h2><div class="cap">Total for items published each day. Lifetime counts, so recent days are still growing.</div><div class="chart"><canvas id="cTime"></canvas></div></section>
+<section class="two"><div><h2>Top performers</h2><div class="chart" style="height:340px"><canvas id="cTop"></canvas></div></div>
+<div><h2>Best posting time-slot (SAST)</h2><div class="cap">Average per item; item count in the label. Small samples.</div><div class="chart" style="height:340px"><canvas id="cSlot"></canvas></div></div></section>
+<section class="two"><div><h2>What kind of video works</h2><div class="cap">Average per item by type (2+ items).</div><div class="chart"><canvas id="cType"></canvas></div></div>
+<div><h2>Follower growth</h2><div class="cap">From dated snapshots; daily snapshots accumulate from the daily refresh.</div><div class="chart"><canvas id="cFol"></canvas></div></div></section>
+<section><h2>Weekly roundup</h2><div class="cap">Week commencing Monday, from Erin's roundup.</div><div class="tw"><table id="wk"></table></div></section>
+<section><h2>Every post</h2><div class="cap" id="pc"></div><div class="bar"><label>Search titles<input id="q" placeholder="e.g. tiger, hat-trick"></label></div><div class="tw"><table id="posts"></table></div></section>
+<section><h2>Data notes</h2><div class="cap">The roundup has nothing between April 2024 and 6 Nov 2026. Per-post figures are public counts read by yt-dlp; Twitch VODs have views only (likes/comments n/a); TikTok follower count is not publicly readable by the refresh (shown only from earlier Studio snapshots); Twitch clips and expired VODs have no view counts. Instagram is run by Samuel and not tracked. A platform's "refreshed" chip shows when its live data was last pulled successfully.</div></section>
+</main><footer>samBest360 · data from public stats + Erin's weekly roundup</footer>
+<script>
+const G='#22C55E',PAL=['#22C55E','#0EA5E9','#F59E0B','#A855F7','#EF4444','#14B8A6'];
+Chart.defaults.color='#8fa396';Chart.defaults.borderColor='#223026';
+let D,S={plat:'All',metric:'views',game:'All games',y24:false,rem:false,q:'',sort:'date',dir:-1},CH={};
+const $=id=>document.getElementById(id),n0=x=>Math.round(x).toLocaleString('en-US');
+const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fd=d=>parseInt(d.slice(8))+' '+M[+d.slice(5,7)-1]+(d<'2026'?' 2024':'');
+const val=i=>i[S.metric]??0;
+const bucket=h=>{const x=+h.slice(0,2);return x<6?'00-06':x<12?'06-12':x<15?'12-15':x<18?'15-18':x<21?'18-21':'21-24'};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;init();render()});
+function init(){
+ $('upd').textContent='Last updated '+(D.updated||'unknown')+' (SAST)';
+ const R=D.refreshed||{};$('ref').innerHTML=['YouTube','TikTok','Twitch'].map(p=>{const r=R[p];return r?`<span class="${r.ok?'':'bad'}">${p} refreshed ${r.at||'never'}${r.ok?'':' — last attempt failed'}</span>`:`<span>${p}: from roundup only</span>`}).join('');
+ $('att').innerHTML=D.attention.map(a=>`<div class="att ${a.tone==='info'?'info':''}"><b>${esc(a.title)}</b><span>${esc(a.body)}</span></div>`).join('');
+ const gs=[...new Set(D.items.map(i=>i.game))].sort();$('game').innerHTML=['All games',...gs].map(g=>`<option>${esc(g)}</option>`).join('');
+ $('plat').innerHTML=['All','TikTok','YouTube','Twitch'].map(p=>`<button data-p="${p}">${p}</button>`).join('');
+ $('plat').onclick=e=>{if(e.target.dataset.p){S.plat=e.target.dataset.p;render()}};
+ $('metric').onchange=e=>{S.metric=e.target.value;render()};$('game').onchange=e=>{S.game=e.target.value;render()};
+ $('y24').onchange=e=>{S.y24=e.target.checked;render()};$('rem').onchange=e=>{S.rem=e.target.checked;render()};
+ $('q').oninput=e=>{S.q=e.target.value.toLowerCase();posts()};
+ weekly();kpis();
+}
+function latest(plat){const L=(D.live_snapshots||[]).filter(s=>s[plat]&&s[plat].followers!=null).slice(-1)[0];if(L)return L[plat].followers;
+ const x=D.snapshots.filter(s=>s.channel.startsWith(plat)&&s.followers!=null).slice(-1)[0];return x?x.followers:null}
+function kpis(){const f=p=>latest(p);const live=p=>D.items.filter(i=>i.platform===p&&i.live);const tot=(p,k)=>live(p).reduce((a,i)=>a+(i[k]||0),0);
+ const c=(v,l,d)=>`<div class="card"><div class="big">${v}</div><div class="lab">${l}</div><div class="det">${d||''}</div></div>`;
+ $('kpi').innerHTML=c(f('TikTok')??'n/a','TikTok followers',n0(tot('TikTok','views'))+' views · '+n0(tot('TikTok','likes'))+' likes · '+live('TikTok').length+' live posts')+
+ c(f('YouTube')??'n/a','YouTube subscribers',n0(tot('YouTube','views'))+' views · '+n0(tot('YouTube','likes'))+' likes · '+live('YouTube').length+' videos')+
+ c(f('Twitch')??'n/a','Twitch followers',n0(tot('Twitch','views'))+' VOD views · '+live('Twitch').length+' VODs')+
+ c(D.attention.length,'Attention items','see Needs attention')}
+function base(extraQ){return D.items.filter(i=>(S.plat==='All'||i.platform===S.plat)&&(S.game==='All games'||i.game===S.game)&&(S.y24||i.date>='2026')&&(S.rem||i.live)&&(!extraQ||!S.q||i.title.toLowerCase().includes(S.q)))}
+function mk(id,cfg){if(CH[id])CH[id].destroy();CH[id]=new Chart($(id),cfg)}
+const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
+function render(){
+ document.querySelectorAll('#plat button').forEach(b=>b.classList.toggle('on',b.dataset.p===S.plat));
+ const b=base(),ML=S.metric[0].toUpperCase()+S.metric.slice(1),tot=b.reduce((a,i)=>a+val(i),0);
+ $('kpi2').innerHTML=[[n0(tot),ML+' in view'],[n0(b.length),'Posts / VODs in view'],[b.length?n0(tot/b.length):0,'Average per item']].map(x=>`<div class="card"><div class="big">${x[0]}</div><div class="lab">${x[1]}</div></div>`).join('');
+ $('twnote').textContent=(S.plat==='All'||S.plat==='Twitch')&&S.metric!=='views'?'Twitch VODs only have views; likes/comments count as 0 here.':'';
+ $('tl').textContent=ML+' over time';
+ const days={};b.filter(i=>i.date>='2026').forEach(i=>days[i.date]=(days[i.date]||0)+val(i));
+ const ks=Object.keys(days).sort();mk('cTime',{type:'line',data:{labels:ks.map(fd),datasets:[{label:ML,data:ks.map(k=>days[k]),borderColor:G,backgroundColor:'#22C55E33',fill:true,tension:.25}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+ const top=[...b].sort((x,y)=>val(y)-val(x)).slice(0,8).filter(i=>val(i)>0);
+ mk('cTop',{type:'bar',data:{labels:top.map(i=>i.title.length>34?i.title.slice(0,32)+'…':i.title),datasets:[{data:top.map(val),backgroundColor:top.map((_,k)=>k?'#22C55E88':G)}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+ const B=['00-06','06-12','12-15','15-18','18-21','21-24'],sl=B.map(k=>({k,x:b.filter(i=>i.time&&bucket(i.time)===k)})).filter(s=>s.x.length);
+ mk('cSlot',{type:'bar',data:{labels:sl.map(s=>s.k+' ('+s.x.length+')'),datasets:[{data:sl.map(s=>Math.round(avg(s.x.map(val)))),backgroundColor:G}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+ const kinds=[...new Set(b.map(i=>i.type))].map(k=>({k,x:b.filter(i=>i.type===k)})).filter(r=>r.x.length>=2).map(r=>({k:r.k+' ('+r.x.length+')',a:avg(r.x.map(val))})).sort((x,y)=>y.a-x.a).slice(0,8);
+ mk('cType',{type:'bar',data:{labels:kinds.map(r=>r.k),datasets:[{data:kinds.map(r=>Math.round(r.a)),backgroundColor:G}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+ followers();posts();
+}
+function followers(){const P=['TikTok','YouTube','Twitch'].filter(p=>S.plat==='All'||S.plat===p),pts={};
+ P.forEach(p=>{pts[p]={};D.snapshots.filter(s=>s.channel.startsWith(p)&&s.followers!=null).forEach(s=>pts[p][s.asof.slice(0,10)]=s.followers);
+  (D.live_snapshots||[]).forEach(s=>{if(s[p]&&s[p].followers!=null)pts[p][s.date]=s[p].followers})});
+ const all=[...new Set(P.flatMap(p=>Object.keys(pts[p])))].sort();
+ mk('cFol',{type:'line',data:{labels:all.map(fd),datasets:P.map((p,k)=>({label:p,data:all.map(d=>pts[p][d]??null),borderColor:PAL[k],spanGaps:true,tension:.2}))},options:{maintainAspectRatio:false}})}
+function weekly(){const cols=['Week','Posted','Posted TikTok','Posted YouTube Shorts','Posted YouTube long-form','Posted Twitch clip','Streams/VODs','Stream hours (known lengths)',"Views on week's posts (as of stats date)","Likes on week's posts"];
+ $('wk').innerHTML='<tr>'+cols.map((c,i)=>`<th class="${i?'n':''}">${c.replace(' (as of stats date)','').replace(' (known lengths)','')}</th>`).join('')+'</tr>'+[...D.weekly].reverse().map(w=>'<tr>'+cols.map((c,i)=>`<td class="${i?'n':''}">${i?(w[c]==null?'':typeof w[c]==='number'?n0(w[c]):w[c]):fd(w.Week)}</td>`).join('')+'</tr>').join('')}
+function posts(){let xs=base(true);const k=S.sort;
+ xs.sort((a,b)=>k==='date'?S.dir*((a.date+a.time)<(b.date+b.time)?-1:1):k==='title'||k==='platform'||k==='game'?S.dir*String(a[k]).localeCompare(b[k]):S.dir*((a[k]??-1)-(b[k]??-1)));
+ $('pc').textContent='Showing '+xs.length+' items. Click a column header to sort.';
+ const H=[['title','Title'],['platform','Platform'],['date','Published'],['game','Game'],['type','Type'],['views','Views','n'],['likes','Likes','n'],['comments','Comments','n'],['live','Status']];
+ $('posts').innerHTML='<tr>'+H.map(h=>`<th class="${h[2]||''}" data-k="${h[0]}">${h[1]}${S.sort===h[0]?(S.dir>0?' ▲':' ▼'):''}</th>`).join('')+'</tr>'+xs.map(i=>`<tr><td class="t">${i.link?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a>`:esc(i.title)}</td><td>${i.platform}</td><td>${fd(i.date)} ${i.time||''}</td><td>${esc(i.game)}</td><td>${esc(i.type)}</td><td class="n">${n0(i.views)}</td><td class="n">${i.likes==null?'n/a':n0(i.likes)}</td><td class="n">${i.comments==null?'n/a':n0(i.comments)}</td><td><span class="tag ${i.live?'':'rm'}">${i.live?'Live':'Removed'}</span></td></tr>`).join('');
+ $('posts').querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;S.dir=S.sort===k?-S.dir:-1;S.sort=k;posts()})}
+</script></body></html>

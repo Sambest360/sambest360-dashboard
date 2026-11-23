@@ -1,0 +1,24 @@
+name: Daily refresh
+on:
+  schedule:
+    - cron: "0 4 * * *"   # 06:00 SAST
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -U yt-dlp
+      - run: python refresh.py
+      - name: Commit updated data
+        run: |
+          git config user.name "samBest360 dashboard bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data.json snapshots.jsonl
+          git diff --cached --quiet || git commit -m "Daily refresh $(date -u +%F)"
+          git push
