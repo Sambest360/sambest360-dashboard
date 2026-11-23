@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23 08:51",
+ "updated": "2026-11-23 09:08",
  "items": [
   {
    "title": "2024 FC24 clip \"🥶🥶🥶 #fifa #fc24 #cr7\"",
@@ -2010,21 +2010,23 @@
  "refreshed": {
   "YouTube": {
    "at": "2026-11-23 08:51",
-   "ok": true
+   "ok": false,
+   "error": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp",
+   "attempted": "2026-11-23 09:08"
   },
   "TikTok": {
-   "at": "2026-11-23 08:51",
+   "at": "2026-11-23 09:08",
    "ok": true
   },
   "Twitch": {
-   "at": "2026-11-23 08:51",
+   "at": "2026-11-23 09:08",
    "ok": true
   }
  },
  "live_snapshots": [
   {
    "date": "2026-11-23",
-   "asof": "2026-11-23 08:51",
+   "asof": "2026-11-23 09:08",
    "TikTok": {
     "followers": null,
     "views": 3224,
