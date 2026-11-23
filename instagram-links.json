@@ -1,0 +1,180 @@
+{
+ "_note": "Instagram Reels posted on @samuelplayz360_ig. refresh.py upserts every entry here (key = reel shortcode). Add new Reels as {link,title,game,date,time}. Counts stay null unless public pull works.",
+ "reels": [
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFDJ_eyqxO/",
+   "title": "8 Goals - Pick Your Favourite! | FC 26 Barcelona",
+   "game": "EA FC 26",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFDwlQynKw/",
+   "title": "Lamine Yamal vs Lamine Yamal | FC 26",
+   "game": "EA FC 26",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFEG2XS09e/",
+   "title": "Raphinha: 3 Goals in 2 Matches | FC 26",
+   "game": "EA FC 26",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFEmGjy-zd/",
+   "title": "Me vs the GTA 6 police impound: busted, wasted, wasted 😭",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFE56ZySKQ/",
+   "title": "Just a chill off-road drive in GTA 6... 💀",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFFQRDyZIH/",
+   "title": "You can scuba dive in GTA 6 🪼",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFFZFDSB30/",
+   "title": "GTA 6 traffic is no joke 🚗",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFFqYdSudu/",
+   "title": "Shootout from a seaplane in GTA 6 ✈️🔫",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFF3mby12a/",
+   "title": "GTA 6 swamp shootout 🔫",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFGM0AyD1k/",
+   "title": "GTA 6 PS5... this got out of hand 💥",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFGY5wymIC/",
+   "title": "GTA 6 PS5 airfield shootout 🔫",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFGkAMyDbQ/",
+   "title": "GTA 6 PS5: they released a polar bear 🐻",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFGvyHSfbi/",
+   "title": "GTA 6 PS5: I robbed the robbers 😭",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFG6PXyJlg/",
+   "title": "GTA 6: Lucia dies... then tries again 💀",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFHIpcy7A4/",
+   "title": "GTA 6 PS5: calling the guy whose car we stole 😭",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFHexZyemQ/",
+   "title": "GTA 6 PS5: he held the door... \"as you should\" 💅",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFHlX7SoPy/",
+   "title": "GTA 6 PS5: 5 STARS WANTED... almost got 6 💀🚨",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFIVM-yoee/",
+   "title": "GTA 6 PS5: worst drive ever? flipped it, then the tanker 💥💀",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFIkYey2gO/",
+   "title": "GTA 6 PS5: Bank 1 heist, full robbery 💰",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFJQwUSFzl/",
+   "title": "GTA 6 PS5: Bank 2 heist, full robbery 💰",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFJwtsyw8p/",
+   "title": "GTA 6 PS5: Bank 3 heist, full robbery 💰",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgE5LXdyaRE/",
+   "title": "GTA 6: what's in the van?! 🐯",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgE5_OgyI5w/",
+   "title": "This police stop did NOT go to plan 😳",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgE7Y6xy5xC/",
+   "title": "GTA 6 club night... show your moves 💃",
+   "game": "GTA 6",
+   "date": "2026-11-23",
+   "time": ""
+  },
+  {
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgFSIzXSUaq/",
+   "title": "Lewandowski vs Man City | FC 26",
+   "game": "EA FC 26",
+   "date": "2026-11-23",
+   "time": ""
+  }
+ ]
+}

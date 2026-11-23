@@ -16,6 +16,8 @@ def key(link):
     if m: return "tt:" + m.group(1)
     m = re.search(r"twitch\.tv/videos/v?(\d+)", link)
     if m: return "tw:" + m.group(1)
+    m = re.search(r"instagram\.com/(?:[\w.]+/)?(?:reel|reels|p)/([\w-]+)", link)
+    if m: return "ig:" + m.group(1)
 idx = {key(i["link"]): i for i in data["items"] if key(i.get("link"))}
 def ytdlp(url, extra=()):
     r = subprocess.run(([shutil.which("yt-dlp")] if shutil.which("yt-dlp") else [sys.executable, "-m", "yt_dlp"]) + [ "-j", "--skip-download", "--no-warnings", *extra, url], capture_output=True, text=True, timeout=1500)
@@ -76,7 +78,30 @@ def tw():
     except Exception: pass
     its = [i for i in data["items"] if i["platform"] == "Twitch"]
     snap["Twitch"] = dict(followers=f, views=sum(i["views"] for i in its), likes=None, posts=len(its))
-for name, fn in (("YouTube", yt), ("TikTok", tt), ("Twitch", tw)):
+def ig():
+    """Instagram: items come from instagram-links.json (upserted, never dropped). Counts via anonymous yt-dlp per reel;
+    Instagram hides view counts and blocks anonymous follower reads, so those stay null (shown n/a). Never uses cookies/logins."""
+    links = json.load(open("instagram-links.json")).get("reels", []) if os.path.exists("instagram-links.json") else []
+    got = 0; errs = []
+    for r in links:
+        k = key(r["link"])
+        if not k: continue
+        if k not in idx:
+            it = dict(title=r["title"], platform="Instagram", date=r.get("date", today), time=r.get("time", ""), game=r.get("game") or game_of(r["title"]),
+                      type="Reel", live=True, views=None, likes=None, comments=None, link=r["link"], kind="short"); data["items"].append(it); idx[k] = it
+        try:
+            d = ytdlp(r["link"])[0]
+            it = idx[k]
+            for a, b in (("views", "view_count"), ("likes", "like_count"), ("comments", "comment_count")):
+                if d.get(b) is not None: it[a] = d[b]
+            if d.get("timestamp") and not r.get("time"): it["date"], it["time"] = when(d["timestamp"])
+            got += 1
+        except Exception as e:
+            errs.append(str(e)[:80])
+    its = [i for i in data["items"] if i["platform"] == "Instagram" and i["live"]]
+    snap["Instagram"] = dict(followers=None, views=None, likes=sum(i["likes"] or 0 for i in its), posts=len(its))
+    if links and not got: raise RuntimeError("no Instagram counts readable anonymously: " + (errs[0] if errs else ""))
+for name, fn in (("YouTube", yt), ("TikTok", tt), ("Twitch", tw), ("Instagram", ig)):
     try:
         fn(); data["refreshed"][name] = dict(at=stamp, ok=True); print(name, "ok", snap.get(name))
     except Exception as e:

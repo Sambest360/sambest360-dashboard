@@ -14,3 +14,6 @@ YouTube / Twitch / TikTok stats), appends today's row to `snapshots.jsonl`, comm
 
 ## Manual refresh
 `pip install yt-dlp && python3 refresh.py && git add -A && git commit -m refresh && git push`
+
+## Instagram (@samuelplayz360_ig)
+Instagram has no public listing the refresh can read, so Reels are listed in `instagram-links.json` (`reels`: `{link,title,game,date,time}`). `refresh.py` upserts each one as a "Reel" item (idempotent, keyed by reel shortcode) and reads likes/comments per Reel anonymously with yt-dlp. Views and follower counts are not public to anonymous readers, so they show `n/a` (never estimated). No cookies or logins are used. **To add a new Reel, append it to `instagram-links.json` and push**; the next daily refresh (or a manual run) shows it.

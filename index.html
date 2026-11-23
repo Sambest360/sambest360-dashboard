@@ -43,7 +43,7 @@ footer{color:var(--mu);font-size:12px;padding:20px 14px;text-align:center}
 <div><h2>Follower growth</h2><div class="cap">From dated snapshots; daily snapshots accumulate from the daily refresh.</div><div class="chart"><canvas id="cFol"></canvas></div></div></section>
 <section><h2>Weekly roundup</h2><div class="cap">Week commencing Monday, from Erin's roundup.</div><div class="tw"><table id="wk"></table></div></section>
 <section><h2>Every post</h2><div class="cap" id="pc"></div><div class="bar"><label>Search titles<input id="q" placeholder="e.g. tiger, hat-trick"></label></div><div class="tw"><table id="posts"></table></div></section>
-<section><h2>Data notes</h2><div class="cap">The roundup has nothing between April 2024 and 6 Nov 2026. Per-post figures are public counts read by yt-dlp; Twitch VODs have views only (likes/comments n/a); TikTok follower count is not publicly readable by the refresh (shown only from earlier Studio snapshots); Twitch clips and expired VODs have no view counts. Instagram is run by Samuel and not tracked. A platform's "refreshed" chip shows when its live data was last pulled successfully.</div></section>
+<section><h2>Data notes</h2><div class="cap">The roundup has nothing between April 2024 and 6 Nov 2026. Per-post figures are public counts read by yt-dlp; Twitch VODs have views only (likes/comments n/a); TikTok follower count is not publicly readable by the refresh (shown only from earlier Studio snapshots); Twitch clips and expired VODs have no view counts. Instagram (@samuelplayz360_ig) is tracked from the Reel links in instagram-links.json: likes/comments are read anonymously per Reel; Instagram does not publish view counts or follower counts to anonymous readers, so those show n/a (never estimated). Reels start 23 Nov 2026. A platform's "refreshed" chip shows when its live data was last pulled successfully.</div></section>
 </main><footer>samBest360 · data from public stats + Erin's weekly roundup</footer>
 <script>
 const G='#22C55E',PAL=['#22C55E','#0EA5E9','#F59E0B','#A855F7','#EF4444','#14B8A6'];
@@ -58,10 +58,10 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;init();render()});
 function init(){
  $('upd').textContent='Last updated '+(D.updated||'unknown')+' (SAST)';
- const R=D.refreshed||{};$('ref').innerHTML=['YouTube','TikTok','Twitch'].map(p=>{const r=R[p];return r?`<span class="${r.ok?'':'bad'}">${p} refreshed ${r.at||'never'}${r.ok?'':' — last attempt failed'}</span>`:`<span>${p}: from roundup only</span>`}).join('');
+ const R=D.refreshed||{};$('ref').innerHTML=['YouTube','TikTok','Instagram','Twitch'].map(p=>{const r=R[p];return r?`<span class="${r.ok?'':'bad'}">${p} refreshed ${r.at||'never'}${r.ok?'':' — last attempt failed'}</span>`:`<span>${p}: from roundup only</span>`}).join('');
  $('att').innerHTML=D.attention.map(a=>`<div class="att ${a.tone==='info'?'info':''}"><b>${esc(a.title)}</b><span>${esc(a.body)}</span></div>`).join('');
  const gs=[...new Set(D.items.map(i=>i.game))].sort();$('game').innerHTML=['All games',...gs].map(g=>`<option>${esc(g)}</option>`).join('');
- $('plat').innerHTML=['All','TikTok','YouTube','Twitch'].map(p=>`<button data-p="${p}">${p}</button>`).join('');
+ $('plat').innerHTML=['All','TikTok','YouTube','Instagram','Twitch'].map(p=>`<button data-p="${p}">${p}</button>`).join('');
  $('plat').onclick=e=>{if(e.target.dataset.p){S.plat=e.target.dataset.p;render()}};
  $('metric').onchange=e=>{S.metric=e.target.value;render()};$('game').onchange=e=>{S.game=e.target.value;render()};
  $('y24').onchange=e=>{S.y24=e.target.checked;render()};$('rem').onchange=e=>{S.rem=e.target.checked;render()};
@@ -73,6 +73,7 @@ function latest(plat){const L=(D.live_snapshots||[]).filter(s=>s[plat]&&s[plat].
 function kpis(){const f=p=>latest(p);const live=p=>D.items.filter(i=>i.platform===p&&i.live);const tot=(p,k)=>live(p).reduce((a,i)=>a+(i[k]||0),0);
  const c=(v,l,d)=>`<div class="card"><div class="big">${v}</div><div class="lab">${l}</div><div class="det">${d||''}</div></div>`;
  $('kpi').innerHTML=c(f('TikTok')??'n/a','TikTok followers',n0(tot('TikTok','views'))+' views · '+n0(tot('TikTok','likes'))+' likes · '+live('TikTok').length+' live posts')+
+ c(f('Instagram')??'n/a','Instagram followers',(live('Instagram').some(i=>i.views!=null)?n0(tot('Instagram','views')):'views n/a')+' · '+n0(tot('Instagram','likes'))+' likes · '+live('Instagram').length+' Reels')+
  c(f('YouTube')??'n/a','YouTube subscribers',n0(tot('YouTube','views'))+' views · '+n0(tot('YouTube','likes'))+' likes · '+live('YouTube').length+' videos')+
  c(f('Twitch')??'n/a','Twitch followers',n0(tot('Twitch','views'))+' VOD views · '+live('Twitch').length+' VODs')+
  c(D.attention.length,'Attention items','see Needs attention')}
@@ -95,17 +96,19 @@ function render(){
  mk('cType',{type:'bar',data:{labels:kinds.map(r=>r.k),datasets:[{data:kinds.map(r=>Math.round(r.a)),backgroundColor:G}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false}}}});
  followers();posts();
 }
-function followers(){const P=['TikTok','YouTube','Twitch'].filter(p=>S.plat==='All'||S.plat===p),pts={};
+function followers(){const P=['TikTok','YouTube','Instagram','Twitch'].filter(p=>S.plat==='All'||S.plat===p),pts={};
  P.forEach(p=>{pts[p]={};D.snapshots.filter(s=>s.channel.startsWith(p)&&s.followers!=null).forEach(s=>pts[p][s.asof.slice(0,10)]=s.followers);
   (D.live_snapshots||[]).forEach(s=>{if(s[p]&&s[p].followers!=null)pts[p][s.date]=s[p].followers})});
  const all=[...new Set(P.flatMap(p=>Object.keys(pts[p])))].sort();
  mk('cFol',{type:'line',data:{labels:all.map(fd),datasets:P.map((p,k)=>({label:p,data:all.map(d=>pts[p][d]??null),borderColor:PAL[k],spanGaps:true,tension:.2}))},options:{maintainAspectRatio:false}})}
-function weekly(){const cols=['Week','Posted','Posted TikTok','Posted YouTube Shorts','Posted YouTube long-form','Posted Twitch clip','Streams/VODs','Stream hours (known lengths)',"Views on week's posts (as of stats date)","Likes on week's posts"];
+function wkStart(d){const t=new Date(d+'T00:00:00Z');t.setUTCDate(t.getUTCDate()-((t.getUTCDay()+6)%7));return t.toISOString().slice(0,10)}
+function weekly(){D.weekly.forEach(w=>{w['Posted Instagram Reel']=D.items.filter(i=>i.platform==='Instagram'&&i.live&&wkStart(i.date)===w.Week).length});
+ const cols=['Week','Posted','Posted TikTok','Posted YouTube Shorts','Posted YouTube long-form','Posted Instagram Reel','Posted Twitch clip','Streams/VODs','Stream hours (known lengths)',"Views on week's posts (as of stats date)","Likes on week's posts"];
  $('wk').innerHTML='<tr>'+cols.map((c,i)=>`<th class="${i?'n':''}">${c.replace(' (as of stats date)','').replace(' (known lengths)','')}</th>`).join('')+'</tr>'+[...D.weekly].reverse().map(w=>'<tr>'+cols.map((c,i)=>`<td class="${i?'n':''}">${i?(w[c]==null?'':typeof w[c]==='number'?n0(w[c]):w[c]):fd(w.Week)}</td>`).join('')+'</tr>').join('')}
 function posts(){let xs=base(true);const k=S.sort;
  xs.sort((a,b)=>k==='date'?S.dir*((a.date+a.time)<(b.date+b.time)?-1:1):k==='title'||k==='platform'||k==='game'?S.dir*String(a[k]).localeCompare(b[k]):S.dir*((a[k]??-1)-(b[k]??-1)));
  $('pc').textContent='Showing '+xs.length+' items. Click a column header to sort.';
  const H=[['title','Title'],['platform','Platform'],['date','Published'],['game','Game'],['type','Type'],['views','Views','n'],['likes','Likes','n'],['comments','Comments','n'],['live','Status']];
- $('posts').innerHTML='<tr>'+H.map(h=>`<th class="${h[2]||''}" data-k="${h[0]}">${h[1]}${S.sort===h[0]?(S.dir>0?' ▲':' ▼'):''}</th>`).join('')+'</tr>'+xs.map(i=>`<tr><td class="t">${i.link?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a>`:esc(i.title)}</td><td>${i.platform}</td><td>${fd(i.date)} ${i.time||''}</td><td>${esc(i.game)}</td><td>${esc(i.type)}</td><td class="n">${n0(i.views)}</td><td class="n">${i.likes==null?'n/a':n0(i.likes)}</td><td class="n">${i.comments==null?'n/a':n0(i.comments)}</td><td><span class="tag ${i.live?'':'rm'}">${i.live?'Live':'Removed'}</span></td></tr>`).join('');
+ $('posts').innerHTML='<tr>'+H.map(h=>`<th class="${h[2]||''}" data-k="${h[0]}">${h[1]}${S.sort===h[0]?(S.dir>0?' ▲':' ▼'):''}</th>`).join('')+'</tr>'+xs.map(i=>`<tr><td class="t">${i.link?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a>`:esc(i.title)}</td><td>${i.platform}</td><td>${fd(i.date)} ${i.time||''}</td><td>${esc(i.game)}</td><td>${esc(i.type)}</td><td class="n">${i.views==null?'n/a':n0(i.views)}</td><td class="n">${i.likes==null?'n/a':n0(i.likes)}</td><td class="n">${i.comments==null?'n/a':n0(i.comments)}</td><td><span class="tag ${i.live?'':'rm'}">${i.live?'Live':'Removed'}</span></td></tr>`).join('');
  $('posts').querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;S.dir=S.sort===k?-S.dir:-1;S.sort=k;posts()})}
 </script></body></html>
