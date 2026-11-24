@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 08:19",
+ "updated": "2026-11-24 16:30",
  "items": [
   {
    "title": "2024 FC24 clip \"🥶🥶🥶 #fifa #fc24 #cr7\"",
@@ -1045,7 +1045,7 @@
    "game": "Helldivers 2",
    "type": "Other game clip",
    "live": true,
-   "views": 3,
+   "views": 4,
    "likes": 3,
    "comments": 0,
    "link": "https://www.tiktok.com/@sambest360/video/7708991566857424149",
@@ -1185,8 +1185,8 @@
    "game": "GTA 6",
    "type": "GTA funny/character moment",
    "live": true,
-   "views": 0,
-   "likes": 1,
+   "views": 1,
+   "likes": 2,
    "comments": 0,
    "link": "https://www.tiktok.com/@sambest360/video/7710782325352697095",
    "kind": "short"
@@ -1199,8 +1199,8 @@
    "game": "GTA 6",
    "type": "GTA funny/character moment",
    "live": true,
-   "views": 0,
-   "likes": 1,
+   "views": 1,
+   "likes": 2,
    "comments": 0,
    "link": "https://www.tiktok.com/@sambest360/video/7710819760497249543",
    "kind": "short"
@@ -1605,7 +1605,7 @@
    "game": "GTA 6",
    "type": "Stream VOD",
    "live": true,
-   "views": 6,
+   "views": 7,
    "likes": null,
    "comments": null,
    "link": "https://www.twitch.tv/videos/2937396432",
@@ -1655,7 +1655,7 @@
   },
   {
    "comments": 0,
-   "likes": 0,
+   "likes": 1,
    "title": "GTA 6 swamp shootout 🔫 PS5 gameplay. Full GTA 6 on YouTube SamuelPlay...",
    "platform": "TikTok",
    "date": "2026-11-23",
@@ -1663,7 +1663,7 @@
    "game": "GTA 6",
    "type": "Other",
    "live": true,
-   "views": 0,
+   "views": 1,
    "link": "https://www.tiktok.com/@sambest360/video/7710823611619118343",
    "kind": "short"
   },
@@ -2019,7 +2019,7 @@
   },
   {
    "comments": 0,
-   "likes": 0,
+   "likes": 1,
    "title": "GTA 6 PS5... this got out of hand 💥 Full GTA 6 on YouTube SamuelPlayz...",
    "platform": "TikTok",
    "date": "2026-11-23",
@@ -2027,8 +2027,50 @@
    "game": "GTA 6",
    "type": "Other",
    "live": true,
-   "views": 0,
+   "views": 1,
    "link": "https://www.tiktok.com/@sambest360/video/7710824352710741249",
+   "kind": "short"
+  },
+  {
+   "comments": 0,
+   "likes": 1,
+   "title": "GTA 6 PS5: they released a POLAR BEAR 🐻😭 Full GTA 6 on YouTube Samuel...",
+   "platform": "TikTok",
+   "date": "2026-11-24",
+   "time": "15:00",
+   "game": "GTA 6",
+   "type": "Other",
+   "live": true,
+   "views": 3,
+   "link": "https://www.tiktok.com/@sambest360/video/7710862147126840584",
+   "kind": "short"
+  },
+  {
+   "comments": 0,
+   "likes": 1,
+   "title": "GTA 6 PS5 airfield shootout 🔫 Full GTA 6 on YouTube SamuelPlayz360, l...",
+   "platform": "TikTok",
+   "date": "2026-11-24",
+   "time": "13:00",
+   "game": "GTA 6",
+   "type": "Other",
+   "live": true,
+   "views": 1,
+   "link": "https://www.tiktok.com/@sambest360/video/7710826946002750721",
+   "kind": "short"
+  },
+  {
+   "title": "GTA 6 PS5: this shootout went WRONG 🔫😅",
+   "platform": "Instagram",
+   "date": "2026-11-24",
+   "time": "10:38",
+   "game": "GTA 6",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 5,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgHix6ZSO7l/",
    "kind": "short"
   }
  ],
@@ -2390,18 +2432,18 @@
    "at": "2026-11-23 14:35",
    "ok": false,
    "error": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp",
-   "attempted": "2026-11-24 08:19"
+   "attempted": "2026-11-24 16:30"
   },
   "TikTok": {
-   "at": "2026-11-24 08:19",
+   "at": "2026-11-24 16:30",
    "ok": true
   },
   "Twitch": {
-   "at": "2026-11-24 08:19",
+   "at": "2026-11-24 16:30",
    "ok": true
   },
   "Instagram": {
-   "at": "2026-11-24 08:19",
+   "at": "2026-11-24 16:30",
    "ok": true
   }
  },
@@ -2436,24 +2478,24 @@
   },
   {
    "date": "2026-11-24",
-   "asof": "2026-11-24 08:19",
+   "asof": "2026-11-24 16:30",
    "TikTok": {
     "followers": null,
-    "views": 3224,
-    "likes": 176,
-    "posts": 36
+    "views": 3233,
+    "likes": 182,
+    "posts": 38
    },
    "Twitch": {
     "followers": 10,
-    "views": 74,
+    "views": 75,
     "likes": null,
     "posts": 23
    },
    "Instagram": {
     "followers": null,
     "views": null,
-    "likes": 247,
-    "posts": 25
+    "likes": 252,
+    "posts": 26
    }
   }
  ]
