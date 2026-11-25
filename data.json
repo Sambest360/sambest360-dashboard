@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 16:30",
+ "updated": "2026-11-25 15:51",
  "items": [
   {
    "title": "2024 FC24 clip \"🥶🥶🥶 #fifa #fc24 #cr7\"",
@@ -2068,9 +2068,79 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 5,
+   "likes": 6,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgHix6ZSO7l/",
+   "kind": "short"
+  },
+  {
+   "comments": 0,
+   "likes": 0,
+   "title": "GTA 6 PS5: this police stop did NOT go to plan 😳 Full GTA 6 on YouTub...",
+   "platform": "TikTok",
+   "date": "2026-11-25",
+   "time": "15:00",
+   "game": "GTA 6",
+   "type": "Other",
+   "live": true,
+   "views": 0,
+   "link": "https://www.tiktok.com/@sambest360/video/7710887908428795144",
+   "kind": "short"
+  },
+  {
+   "comments": 0,
+   "likes": 0,
+   "title": "GTA 6 PS5: ROBBED THE ROBBERS 😭 Full GTA 6 on YouTube SamuelPlayz360,...",
+   "platform": "TikTok",
+   "date": "2026-11-25",
+   "time": "13:00",
+   "game": "GTA 6",
+   "type": "Other",
+   "live": true,
+   "views": 0,
+   "link": "https://www.tiktok.com/@sambest360/video/7710887551053090049",
+   "kind": "short"
+  },
+  {
+   "title": "GTA 6 PS5: the bike vs literally everything 🏍️😭",
+   "platform": "Instagram",
+   "date": "2026-11-24",
+   "time": "16:32",
+   "game": "GTA 6",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 10,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgILa7ly3cz/",
+   "kind": "short"
+  },
+  {
+   "title": "FC26 PS5: THAT SAVE?! 🧤😳",
+   "platform": "Instagram",
+   "date": "2026-11-25",
+   "time": "10:40",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 4,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgKHsCiS5sP/",
+   "kind": "short"
+  },
+  {
+   "title": "FC26 KEEPER SAID NO 🧤🔥",
+   "platform": "Instagram",
+   "date": "2026-11-25",
+   "time": "13:38",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 1,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgKcQY4ybN6/",
    "kind": "short"
   }
  ],
@@ -2431,19 +2501,19 @@
   "YouTube": {
    "at": "2026-11-23 14:35",
    "ok": false,
-   "error": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp",
-   "attempted": "2026-11-24 16:30"
+   "error": "] NesZINls-Go: Video unavailable. This content isn’t available.\nERROR: [youtube] gE59dv5oHT4: Video unavailable. This content isn’t available.\nERROR: [youtube] k0dnS2V8Xdc: Video unavailable. This con",
+   "attempted": "2026-11-25 15:51"
   },
   "TikTok": {
-   "at": "2026-11-24 16:30",
+   "at": "2026-11-25 15:51",
    "ok": true
   },
   "Twitch": {
-   "at": "2026-11-24 16:30",
+   "at": "2026-11-25 15:51",
    "ok": true
   },
   "Instagram": {
-   "at": "2026-11-24 16:30",
+   "at": "2026-11-25 15:51",
    "ok": true
   }
  },
@@ -2496,6 +2566,28 @@
     "views": null,
     "likes": 252,
     "posts": 26
+   }
+  },
+  {
+   "date": "2026-11-25",
+   "asof": "2026-11-25 15:51",
+   "TikTok": {
+    "followers": null,
+    "views": 3233,
+    "likes": 182,
+    "posts": 40
+   },
+   "Twitch": {
+    "followers": 11,
+    "views": 75,
+    "likes": null,
+    "posts": 23
+   },
+   "Instagram": {
+    "followers": null,
+    "views": null,
+    "likes": 268,
+    "posts": 29
    }
   }
  ]
