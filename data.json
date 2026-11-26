@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25 15:51",
+ "updated": "2026-11-26 15:30",
  "items": [
   {
    "title": "2024 FC24 clip \"🥶🥶🥶 #fifa #fc24 #cr7\"",
@@ -2083,7 +2083,7 @@
    "game": "GTA 6",
    "type": "Other",
    "live": true,
-   "views": 0,
+   "views": 3,
    "link": "https://www.tiktok.com/@sambest360/video/7710887908428795144",
    "kind": "short"
   },
@@ -2141,6 +2141,76 @@
    "likes": 1,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgKcQY4ybN6/",
+   "kind": "short"
+  },
+  {
+   "comments": 0,
+   "likes": 0,
+   "title": "GTA 6 PS5: this shootout went WRONG 🔫😅 Full GTA 6 on YouTube SamuelPl...",
+   "platform": "TikTok",
+   "date": "2026-11-26",
+   "time": "15:00",
+   "game": "GTA 6",
+   "type": "Other",
+   "live": true,
+   "views": 0,
+   "link": "https://www.tiktok.com/@sambest360/video/7711019358822223122",
+   "kind": "short"
+  },
+  {
+   "comments": 0,
+   "likes": 0,
+   "title": "GTA 6 PS5: she died... and tried AGAIN 💀😭 Full GTA 6 on YouTube Samue...",
+   "platform": "TikTok",
+   "date": "2026-11-26",
+   "time": "13:00",
+   "game": "GTA 6",
+   "type": "Other",
+   "live": true,
+   "views": 0,
+   "link": "https://www.tiktok.com/@sambest360/video/7711018656607554834",
+   "kind": "short"
+  },
+  {
+   "title": "FC26: HOW IS THIS NOT A GOAL 😳⚽",
+   "platform": "Instagram",
+   "date": "2026-11-25",
+   "time": "16:32",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": null,
+   "comments": null,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgKwEgLS3Db/",
+   "kind": "short"
+  },
+  {
+   "title": "Helldivers 2: the whole stream in one Short",
+   "platform": "Instagram",
+   "date": "2026-11-26",
+   "time": "10:40",
+   "game": "Helldivers 2",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": null,
+   "comments": null,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgMsiDwSPmw/",
+   "kind": "short"
+  },
+  {
+   "title": "Barça 4-0 Man City by half time in FC 26",
+   "platform": "Instagram",
+   "date": "2026-11-26",
+   "time": "13:33",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": null,
+   "comments": null,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgNAaIsy-I2/",
    "kind": "short"
   }
  ],
@@ -2501,20 +2571,22 @@
   "YouTube": {
    "at": "2026-11-23 14:35",
    "ok": false,
-   "error": "] NesZINls-Go: Video unavailable. This content isn’t available.\nERROR: [youtube] gE59dv5oHT4: Video unavailable. This content isn’t available.\nERROR: [youtube] k0dnS2V8Xdc: Video unavailable. This con",
-   "attempted": "2026-11-25 15:51"
+   "error": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp",
+   "attempted": "2026-11-26 15:30"
   },
   "TikTok": {
-   "at": "2026-11-25 15:51",
+   "at": "2026-11-26 15:30",
    "ok": true
   },
   "Twitch": {
-   "at": "2026-11-25 15:51",
+   "at": "2026-11-26 15:30",
    "ok": true
   },
   "Instagram": {
    "at": "2026-11-25 15:51",
-   "ok": true
+   "ok": false,
+   "error": "no Instagram counts readable anonymously: s-cookies-to-yt-dlp  for how to manually pass cookies. Otherwise, if the post is",
+   "attempted": "2026-11-26 15:30"
   }
  },
  "live_snapshots": [
@@ -2588,6 +2660,28 @@
     "views": null,
     "likes": 268,
     "posts": 29
+   }
+  },
+  {
+   "date": "2026-11-26",
+   "asof": "2026-11-26 15:30",
+   "TikTok": {
+    "followers": null,
+    "views": 3236,
+    "likes": 182,
+    "posts": 42
+   },
+   "Twitch": {
+    "followers": 10,
+    "views": 75,
+    "likes": null,
+    "posts": 23
+   },
+   "Instagram": {
+    "followers": null,
+    "views": null,
+    "likes": 268,
+    "posts": 32
    }
   }
  ]
