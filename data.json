@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26 15:30",
+ "updated": "2026-11-27 15:26",
  "items": [
   {
    "title": "2024 FC24 clip \"🥶🥶🥶 #fifa #fc24 #cr7\"",
@@ -1655,7 +1655,7 @@
   },
   {
    "comments": 0,
-   "likes": 1,
+   "likes": 2,
    "title": "GTA 6 swamp shootout 🔫 PS5 gameplay. Full GTA 6 on YouTube SamuelPlay...",
    "platform": "TikTok",
    "date": "2026-11-23",
@@ -2019,7 +2019,7 @@
   },
   {
    "comments": 0,
-   "likes": 1,
+   "likes": 2,
    "title": "GTA 6 PS5... this got out of hand 💥 Full GTA 6 on YouTube SamuelPlayz...",
    "platform": "TikTok",
    "date": "2026-11-23",
@@ -2033,7 +2033,7 @@
   },
   {
    "comments": 0,
-   "likes": 1,
+   "likes": 2,
    "title": "GTA 6 PS5: they released a POLAR BEAR 🐻😭 Full GTA 6 on YouTube Samuel...",
    "platform": "TikTok",
    "date": "2026-11-24",
@@ -2047,7 +2047,7 @@
   },
   {
    "comments": 0,
-   "likes": 1,
+   "likes": 2,
    "title": "GTA 6 PS5 airfield shootout 🔫 Full GTA 6 on YouTube SamuelPlayz360, l...",
    "platform": "TikTok",
    "date": "2026-11-24",
@@ -2124,7 +2124,7 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 4,
+   "likes": 6,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgKHsCiS5sP/",
    "kind": "short"
@@ -2180,8 +2180,8 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": null,
-   "comments": null,
+   "likes": 6,
+   "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgKwEgLS3Db/",
    "kind": "short"
   },
@@ -2194,8 +2194,8 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": null,
-   "comments": null,
+   "likes": 1,
+   "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgMsiDwSPmw/",
    "kind": "short"
   },
@@ -2208,9 +2208,51 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": null,
-   "comments": null,
+   "likes": 0,
+   "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgNAaIsy-I2/",
+   "kind": "short"
+  },
+  {
+   "title": "Chelsea never led and still got 4-4",
+   "platform": "Instagram",
+   "date": "2026-11-26",
+   "time": "16:35",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 0,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgNVRH8SsYT/",
+   "kind": "short"
+  },
+  {
+   "title": "Helldivers 2: The Destroyer Left Orbit Mid-Extraction",
+   "platform": "Instagram",
+   "date": "2026-11-27",
+   "time": "10:39",
+   "game": "Helldivers 2",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 0,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgPRJWEyH3K/",
+   "kind": "short"
+  },
+  {
+   "title": "Helldivers 2: Purging the Hatcheries on Gatria (Extreme 6)",
+   "platform": "Instagram",
+   "date": "2026-11-27",
+   "time": "13:41",
+   "game": "Helldivers 2",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 0,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgPmAKWy9EA/",
    "kind": "short"
   }
  ],
@@ -2572,21 +2614,19 @@
    "at": "2026-11-23 14:35",
    "ok": false,
    "error": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp",
-   "attempted": "2026-11-26 15:30"
+   "attempted": "2026-11-27 15:26"
   },
   "TikTok": {
-   "at": "2026-11-26 15:30",
+   "at": "2026-11-27 15:26",
    "ok": true
   },
   "Twitch": {
-   "at": "2026-11-26 15:30",
+   "at": "2026-11-27 15:26",
    "ok": true
   },
   "Instagram": {
-   "at": "2026-11-25 15:51",
-   "ok": false,
-   "error": "no Instagram counts readable anonymously: s-cookies-to-yt-dlp  for how to manually pass cookies. Otherwise, if the post is",
-   "attempted": "2026-11-26 15:30"
+   "at": "2026-11-27 15:26",
+   "ok": true
   }
  },
  "live_snapshots": [
@@ -2682,6 +2722,28 @@
     "views": null,
     "likes": 268,
     "posts": 32
+   }
+  },
+  {
+   "date": "2026-11-27",
+   "asof": "2026-11-27 15:26",
+   "TikTok": {
+    "followers": null,
+    "views": 3236,
+    "likes": 186,
+    "posts": 42
+   },
+   "Twitch": {
+    "followers": 9,
+    "views": 75,
+    "likes": null,
+    "posts": 23
+   },
+   "Instagram": {
+    "followers": null,
+    "views": null,
+    "likes": 277,
+    "posts": 35
    }
   }
  ]
