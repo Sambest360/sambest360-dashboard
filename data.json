@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 15:26",
+ "updated": "2026-11-28 14:40",
  "items": [
   {
    "title": "2024 FC24 clip \"🥶🥶🥶 #fifa #fc24 #cr7\"",
@@ -2194,7 +2194,7 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgMsiDwSPmw/",
    "kind": "short"
@@ -2208,7 +2208,7 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgNAaIsy-I2/",
    "kind": "short"
@@ -2222,7 +2222,7 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgNVRH8SsYT/",
    "kind": "short"
@@ -2236,7 +2236,7 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgPRJWEyH3K/",
    "kind": "short"
@@ -2250,9 +2250,219 @@
    "type": "Reel",
    "live": true,
    "views": null,
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgPmAKWy9EA/",
+   "kind": "short"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "FC26 stream (0:31:24)",
+   "platform": "Twitch",
+   "date": "2026-11-28",
+   "time": "11:45",
+   "game": "FC26",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2943118582",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "FC26 stream (2:03:41)",
+   "platform": "Twitch",
+   "date": "2026-11-27",
+   "time": "11:03",
+   "game": "FC26",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 1,
+   "link": "https://www.twitch.tv/videos/2942093646",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "FC26 stream (0:00:14)",
+   "platform": "Twitch",
+   "date": "2026-11-27",
+   "time": "10:58",
+   "game": "FC26",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2942091488",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (3:16:27)",
+   "platform": "Twitch",
+   "date": "2026-11-26",
+   "time": "22:11",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 4,
+   "link": "https://www.twitch.tv/videos/2941623114",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (0:41:24)",
+   "platform": "Twitch",
+   "date": "2026-11-26",
+   "time": "20:01",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2941506052",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (0:43:40)",
+   "platform": "Twitch",
+   "date": "2026-11-26",
+   "time": "16:36",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 1,
+   "link": "https://www.twitch.tv/videos/2941344915",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "FC26 stream (0:03:42)",
+   "platform": "Twitch",
+   "date": "2026-11-26",
+   "time": "10:25",
+   "game": "FC26",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2941169422",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (0:29:28)",
+   "platform": "Twitch",
+   "date": "2026-11-26",
+   "time": "06:59",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2941074385",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (1:48:58)",
+   "platform": "Twitch",
+   "date": "2026-11-26",
+   "time": "03:52",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2940938146",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (2:12:01)",
+   "platform": "Twitch",
+   "date": "2026-11-25",
+   "time": "17:44",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 1,
+   "link": "https://www.twitch.tv/videos/2940406886",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "FC26 stream (1:37:01)",
+   "platform": "Twitch",
+   "date": "2026-11-25",
+   "time": "15:21",
+   "game": "FC26",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 2,
+   "link": "https://www.twitch.tv/videos/2940313102",
+   "kind": "vod"
+  },
+  {
+   "comments": null,
+   "likes": null,
+   "title": "GTA 6 stream (1:27:59)",
+   "platform": "Twitch",
+   "date": "2026-11-25",
+   "time": "03:55",
+   "game": "GTA 6",
+   "type": "Stream VOD",
+   "live": true,
+   "views": 0,
+   "link": "https://www.twitch.tv/videos/2939956829",
+   "kind": "vod"
+  },
+  {
+   "title": "Helldivers 2: Six Extractions, One Night (and One Left at the Door)",
+   "platform": "Instagram",
+   "date": "2026-11-27",
+   "time": "16:32",
+   "game": "Helldivers 2",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 1,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgP5nNAy_vT/",
+   "kind": "short"
+  },
+  {
+   "title": "3-4 DOWN with a minute left vs PSG",
+   "platform": "Instagram",
+   "date": "2026-11-28",
+   "time": "10:34",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 3,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgR1fRvSxE-/",
+   "kind": "short"
+  },
+  {
+   "title": "Dembélé finishes it off, 7-1 vs Real Madrid",
+   "platform": "Instagram",
+   "date": "2026-11-28",
+   "time": "13:36",
+   "game": "EA FC 26",
+   "type": "Reel",
+   "live": true,
+   "views": null,
+   "likes": 0,
+   "comments": 0,
+   "link": "https://www.instagram.com/samuelplayz360_ig/reel/DgSKNQ0Suja/",
    "kind": "short"
   }
  ],
@@ -2614,18 +2824,18 @@
    "at": "2026-11-23 14:35",
    "ok": false,
    "error": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp",
-   "attempted": "2026-11-27 15:26"
+   "attempted": "2026-11-28 14:40"
   },
   "TikTok": {
-   "at": "2026-11-27 15:26",
+   "at": "2026-11-28 14:40",
    "ok": true
   },
   "Twitch": {
-   "at": "2026-11-27 15:26",
+   "at": "2026-11-28 14:40",
    "ok": true
   },
   "Instagram": {
-   "at": "2026-11-27 15:26",
+   "at": "2026-11-28 14:40",
    "ok": true
   }
  },
@@ -2744,6 +2954,28 @@
     "views": null,
     "likes": 277,
     "posts": 35
+   }
+  },
+  {
+   "date": "2026-11-28",
+   "asof": "2026-11-28 14:40",
+   "TikTok": {
+    "followers": null,
+    "views": 3236,
+    "likes": 186,
+    "posts": 42
+   },
+   "Twitch": {
+    "followers": 9,
+    "views": 84,
+    "likes": null,
+    "posts": 35
+   },
+   "Instagram": {
+    "followers": null,
+    "views": null,
+    "likes": 286,
+    "posts": 38
    }
   }
  ]
